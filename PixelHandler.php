@@ -51,7 +51,11 @@ class PixelHandler implements MessageComponentInterface {
                         break;
                 }
                 break;
+            default:
+                $from->send("{\"error\":\"unexpected message\"}");
+                break;
         }
+
     }
 
     public function onClose(ConnectionInterface $conn) {

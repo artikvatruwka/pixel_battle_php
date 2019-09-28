@@ -12,7 +12,7 @@ $server = IoServer::factory(
             new PixelHandler()
         )
     ),
-    8080
+    8080    
 );
 
 $server->run();

@@ -2,7 +2,7 @@ window.onload = function () {
 let scale=8;
 let colorPallette  = "#ff0000";
 function connect() {
-    let ws = new WebSocket('ws://localhost:8080');
+    let ws = new WebSocket('ws://'+window.location.hostname+':8080');
     ws.onopen = () => {
         let startRequest = {
             type: "get",
@@ -23,7 +23,7 @@ function connect() {
             case "clear":
                 destroyTable();
                 renderTable(scale);
-                fillTable(obj.data);
+                break;
             default:
                 console.error("Undefined server answer!");
                 break;
