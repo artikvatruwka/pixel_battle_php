@@ -1,6 +1,6 @@
 window.onload = function () {
 let scale=8;
-let colorPallette  = "#ff0000"
+let colorPallette  = "#ff0000";
 function connect() {
     let ws = new WebSocket('ws://localhost:8080');
     ws.onopen = () => {
@@ -15,7 +15,6 @@ function connect() {
         obj = JSON.parse(e.data);
         switch (obj.object) {
             case "start":
-
                 start();
                 break;
             case "pixel":
@@ -116,8 +115,8 @@ function connect() {
 
     function renderTable(scale) {
         let table = document.createElement("table");
-        table.style.width=100*scale;
-        table.style.height=100*scale;
+        // table.style.minWidth=100*scale+"px";
+        // table.style.minHeight=100*scale+"px";
         table.id="pixel-field";
         for(let i =0; i<100; i++){
             let row = document.createElement("tr");
