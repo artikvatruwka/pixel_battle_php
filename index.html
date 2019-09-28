@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/color-picker.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/jquery.slim.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/websocket-as-promised.js"></script>
+    <script src="js/color-picker.min.js"></script>
+    <script src="js/game.js"></script>
+
+    <title>Title</title>
+</head>
+<body class="bg-secondary">
+<div class="container" id="app">
+    <div id="loading">
+        <div  class="spinner-border text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="text-center text-white">Loading...</div>
+    </div>
+    <header class="navbar bg-dark text-white">
+        <ul class="nav nav-pills nav-fill">
+            <button id="change-color" class="btn btn-block" style="background-color: #ff0000">Change color</button>
+            <button id="clear-btn" class="btn btn-block btn-danger">Clear</button>
+            <!--<li class="nav-item"><a class="nav-link text-white" href="">Log in</a></li>-->
+            <!--<li class="nav-item"><a class="nav-link text-white" href="">Sign up</a></li>-->
+        </ul>
+    </header>
+    <div id="pixel-battle-app"class="d-flex justify-content-center ">
+
+    </div>
+
+</div>
+
+</body>
+</html>
